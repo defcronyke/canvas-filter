@@ -1,0 +1,21 @@
+application: canvas-filter
+version: 1
+runtime: go
+api_version: go1
+
+handlers:
+- url: /.*
+  script: _go_app
+  secure: always
+
+skip_files:
+- static/conf
+- static/gulp_tasks
+- static/node_modules
+- static/src
+- static/.git
+- static/.tmp
+- .git/
+- gulpfile.js
+- package-lock.json
+- package.json
